@@ -1,37 +1,50 @@
-Gerador de Senhas: Lógica Pura e Eficiência no Navegador
-Este projeto foi desenvolvido para oferecer uma solução de segurança personalizada diretamente no navegador, sem a necessidade de bibliotecas externas ou processos de compilação. A ideia central foi aplicar conceitos avançados de Engenharia de Software, como Programação Orientada a Objetos (POO), em um ambiente de execução simples e direto.
+# 🔐 Gerador de Senhas (com Entropia!)
 
-O diferencial da lógica
-Muitos geradores de senhas seguem padrões previsíveis. Nesta implementação, a segurança foi priorizada através de um sistema de "pool" de funções:
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/ArthurssDev/password-generator)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/ArthurssDev/password-generator)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/ArthurssDev/password-generator)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://gerador-senha-gold.vercel.app/)
 
-Aleatoriedade Real: O algoritmo não segue uma sequência fixa. Ele sorteia dinamicamente qual tipo de caractere (número, letra ou símbolo) será inserido em cada posição da senha, aumentando drasticamente a imprevisibilidade.
+> Chega de usar `senha123` ou a data de nascimento do cachorro. Este é um gerador de senhas direto ao ponto que cria combinações realmente seguras e, o grande diferencial: **calcula a entropia** da senha gerada. 
 
-Construção Sob Medida: A senha é montada exatamente com o comprimento solicitado, utilizando métodos estáticos para garantir que o processamento seja rápido e consuma o mínimo de memória.
+Ou seja, a aplicação não apenas cospe uma string aleatória, mas te mostra matematicamente o quão difícil ela é de ser quebrada via força bruta.
 
-Experiência do Usuário (UX)
-O foco não foi apenas o funcionamento interno, mas como o usuário interage com a ferramenta:
+---
 
-Interface Alinhada: Utilizei Flexbox no CSS para garantir que todos os controles e campos de seleção fiquem perfeitamente organizados e fáceis de ler, independentemente do dispositivo.
+## 🌐 Demo Ao Vivo
 
-Cópia Inteligente: Através da Clipboard API, a senha gerada pode ser copiada para a área de transferência com um único toque. O sistema utiliza funções assíncronas para gerenciar a cópia e fornecer um feedback visual de confirmação ao usuário.
+Não quer baixar o código agora pra ver como ficou? Testa a aplicação rodando direto na Vercel:
+👉 **[Acessar o Gerador de Senhas Online](https://gerador-senha-gold.vercel.app/)**
 
-Tecnologias e Organização
-O projeto utiliza apenas tecnologias nativas, o que facilita a leitura do código por outros desenvolvedores:
+---
 
-HTML5 e CSS3: Estrutura semântica e estilização moderna baseada em variáveis e design responsivo.
+## ⚡ O que tem de bom aqui?
 
-JavaScript Moderno (ES6+): O código é organizado em classes independentes. A GeradorSenha cuida da matemática e lógica, enquanto a GeradorSenhaUI gerencia a interação com a tela e os eventos do DOM.
+- **Customização Total:** Você escolhe a receita. Dá pra incluir Letras Maiúsculas, Minúsculas, Números e/ou Símbolos.
+- **Termômetro de Entropia:** Feedback visual e matemático da força da sua senha (baseado no tamanho do conjunto de caracteres e no comprimento da senha).
+- **Copia e Cola:** Um clique e a senha já está na sua área de transferência, pronta pra uso.
+- **Leve e rápido:** Zero dependências. Nada de esperar 10 minutos rodando `npm install`.
 
-Como visualizar o projeto
-Por não utilizar ferramentas de build ou dependências de terceiros, o projeto é extremamente leve:
+---
 
-Faça o download ou clone o repositório.
+## 🛠️ Tecnologias e Conceitos Aplicados
 
-Abra o arquivo index.html diretamente em qualquer navegador moderno.
+* **HTML5:** Estruturação semântica da interface, controle de inputs (checkboxes e sliders).
+* **CSS3:** * Estilização responsiva.
+  * Customização visual dos elementos de formulário.
+  * Feedback visual dinâmico dependendo da força da senha.
+* **JavaScript (Vanilla):**
+  * Manipulação do DOM em tempo real.
+  * Algoritmos de aleatoriedade para garantir senhas não previsíveis (`Math.random` / `Crypto.getRandomValues`).
+  * Cálculo matemático de entropia (tamanho do *pool* de caracteres vs comprimento da senha).
+  * Consumo da Clipboard API (`navigator.clipboard.writeText`) para a funcionalidade de copiar com um clique.
 
-Se preferir um ambiente mais controlado, pode utilizar a extensão Live Server no VS Code para rodar o projeto localmente.
+---
 
-Evolução técnica
-Trabalhar neste projeto permitiu consolidar o uso de módulos nativos do JavaScript e a manipulação direta do DOM. A separação de responsabilidades entre as classes permite que novas funcionalidades — como um histórico de senhas geradas ou um medidor de força — sejam adicionadas no futuro sem a necessidade de reescrever a base do sistema.
+## 🚀 Como rodar na sua máquina
 
-Se você tiver sugestões sobre a lógica de sorteio ou quiser contribuir com melhorias na interface, sinta-se à vontade para abrir uma discussão no repositório.
+Mais fácil que quebrar senha fraca. Saca só:
+
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/ArthurssDev/password-generator.git](https://github.com/ArthurssDev/password-generator.git)
