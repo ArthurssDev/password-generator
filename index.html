@@ -4,51 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gerador de Senhas</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Gerador de Senha</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <main class="container">
-    <h1>Gerador de Senha</h1>
-    
-    <div class="resultado-container">
-      <div class="resultado">Selecione as opções</div>
-      <div class="dica">👆 DICA: CLIQUE PARA COPIAR</div>
-    </div>
+  <div class="fundo-tela">
+    <main class="container-principal">
+      <h1 class="titulo">Gerador de Senha</h1>
 
-    <div class="opcoes-container">
-      <div class="form-group">
-        <label for="caracteres">Quantidade de caracteres:</label>
-        <input type="number" id="caracteres" class="quantidade-caracteres" value="12" min="4" max="50">
+      <div class="caixa-resultado">
+        <div class="resultado">Selecione as opções</div>
+        <p class="dica">👆 DICA: CLIQUE PARA COPIAR</p>
       </div>
-      
-      <div class="form-group">
-        <label for="num">Adicionar números</label>
-        <input type="checkbox" id="num" class="numeros" checked>
-      </div>
-      
-      <div class="form-group">
-        <label for="mai">Letras maiúsculas</label>
-        <input type="checkbox" id="mai" class="letras-maiusculas" checked>
-      </div>
-      
-      <div class="form-group">
-        <label for="min">Letras minúsculas</label>
-        <input type="checkbox" id="min" class="letras-minusculas" checked>
-      </div>
-      
-      <div class="form-group">
-        <label for="sim">Adicionar símbolos</label>
-        <input type="checkbox" id="sim" class="simbolos">
-      </div>
-    </div>
 
-    <button class="gerar">Gerar Senha</button>
-  </main>
+      <div class="opcoes-painel">
+        <div class="grupo-controle">
+          <label>Quantidade de caracteres:</label>
+          <input type="number" class="quantidade-caracteres" value="12" min="4" max="50">
+        </div>
 
-  <script src="./assets/js/index.js"></script>
+        <div class="grupo-controle">
+          <label>Adicionar números</label>
+          <input type="checkbox" class="numeros" checked>
+        </div>
+
+        <div class="grupo-controle">
+          <label>Letras maiúsculas</label>
+          <input type="checkbox" class="letras-maiusculas" checked>
+        </div>
+
+        <div class="grupo-controle">
+          <label>Letras minúsculas</label>
+          <input type="checkbox" class="letras-minusculas" checked>
+        </div>
+
+        <div class="grupo-controle">
+          <label>Adicionar símbolos</label>
+          <input type="checkbox" class="simbolos">
+        </div>
+      </div>
+
+      <button class="gerar">Gerar Senha</button>
+    </main>
+  </div>
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>
